@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: #c62828; /* Vermelho */
+    color: white; /* Texto branco */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: auto;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.info {
+    margin: 10px 0;
+}
+
+.info label {
+    font-weight: bold;
+}
