@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #d32f2f;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.student-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+.student-list li {
+    list-style: none;
+}
+
+.student-list button {
+    background-color: white;
+    border: 1px solid #d32f2f;
+    border-radius: 5px;
+    padding: 15px 20px;
+    color: #d32f2f;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 120px;
+    text-align: center;
+}
+
+.student-list button:hover {
+    background-color: #ef9a9a;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #b71c1c;
+}
