@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Atendimento de Alunos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #dad5d5;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        form {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        label {
+            width: 100%;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0 5px; /* Espaço simétrico entre os botões */
+            flex: 1; /* Faz com que os botões ocupem espaço igual */
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .redirect-button {
+            background-color: #007BFF;
+        }
+        .redirect-button:hover {
+            background-color: #0056b3;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between; /* Espaço simétrico entre os botões */
+            margin-top: 10px; /* Espaço acima dos botões */
+        }
+        .title {
+            text-align: center; /* Centraliza o título */
+            margin-bottom: 20px; /* Espaço abaixo do título */
+        }
+        @media (max-width: 768px) {
+            form {
+                padding: 15px;
+                max-width: 100%;
+            }
+            input, textarea, button {
+                padding: 8px;
+            }
+        }
+        @media (max-width: 480px) {
+            form {
+                padding: 10px;
+            }
+            label, input, textarea, button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEmhaEK0AahY6v7bsr8h61jxmKMol_EbpZag&s">
+
+    <div class="container">
+        <h2 class="title">Formulário de Atendimento</h2>
+
+        <form action="/enviar-relatorio" method="post" enctype="multipart/form-data">
+            <!-- Nome do Aluno -->
+            <label for="nomeAluno">Nome do Aluno:</label>
+            <input type="text" id="nomeAluno" name="nomeAluno" required>
+
+            <!-- Motivos do Atendimento e Data do Atendimento lado a lado -->
+            <div class="input-group">
+                <div style="flex: 1;">
+                    <label for="motivosAtendimento">Motivos do Atendimento:</label>
+                    <input type="text" id="motivosAtendimento" name="motivosAtendimento" required>
+                </div>
+                <div style="flex: 1;">
+                    <label for="dataAtendimento">Data do Atendimento:</label>
+                    <input type="date" id="dataAtendimento" name="dataAtendimento" required>
+                </div>
+            </div>
+
+            <!-- Turma/Curso e Número da Matrícula lado a lado -->
+            <div class="input-group">
+                <div style="flex: 1;">
+                    <label for="turmaCurso">Turma/Curso:</label>
+                    <input type="text" id="turmaCurso" name="turmaCurso" required>
+                </div>
+                <div style="flex: 1;">
+                    <label for="matricula">Número da Matrícula:</label>
+                    <input type="text" id="matricula" name="matricula" required>
+                </div>
+            </div>
+
+            <!-- Comentários -->
+            <label for="comentarios">Comentários:</label>
+            <textarea id="comentarios" name="comentarios" rows="5" placeholder="Escreva seus comentários aqui..."></textarea>
+
+            <!-- Botões de Submissão e Redirecionamento -->
+            <div class="button-group">
+                <button type="submit">Submeter Relatório</button>
+                <button class="redirect-button" onclick="window.location.href='atendimento.html'">Ir para Atendimento</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
